@@ -11,6 +11,7 @@ const Homepage = () => {
                     <Typography variant="h4" color="black">
                         <Link to="/workshop1" style={styles.link}>Workshop 1 Form Validator</Link>
                         <Link to="/workshop2" style={styles.link}>Workshop 2 Quiz App</Link>
+                        <Link to="/workshop3" style={styles.link}>Workshop 3 Theme Dark / Light</Link>
                     </Typography>
                 </Grid>
             </Grid>
@@ -24,8 +25,6 @@ const styles = {
         flexDirections: 'column',
         fontSize: '2rem',
         padding: '1.5rem',
-        width: '50%',
-        marginLeft: '2rem',
         marginBottom: '1rem',
         backgroundColor: '#333',
         color: '#fff',
