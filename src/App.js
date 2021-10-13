@@ -7,6 +7,7 @@ import WorkShop1 from './components/workshop1';
 import WorkShop2 from './components/workshop2';
 import Workshop3 from './components/workshop3';
 import Workshop4 from './components/workshop4';
+import Workshop5 from './components/workshop5';
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
           <Route path="/workshop2" component={WorkShop2} />
           <Route path="/workshop3" component={Workshop3} />
           <Route path="/workshop4" component={Workshop4} />
+          <Route path="/workshop5" component={Workshop5} />
         </Switch>
       </Container>
     </BrowserRouter>
