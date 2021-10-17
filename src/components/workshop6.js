@@ -1,7 +1,7 @@
 import { Button, Drawer, Typography, IconButton, List, ListItem, ListItemIcon, ListItemText } from "@mui/material";
 import { Menu, Home, Person, ShoppingCart } from "@mui/icons-material"
 import { useState } from "react";
-import { Link, Route, Switch } from 'react-router-dom';
+import { Link, Route, Switch, Redirect } from 'react-router-dom';
 import Navbar from "./navbar";
 import { Box } from "@mui/system";
 
@@ -26,7 +26,7 @@ const MainPage = () => {
     return (
         <Box sx={{ backgroundColor: 'lightblue', textAlign: 'center', p: 5 }}>
             <Typography variant="h2">MainPage</Typography>
-            <Typography variant="h5" sx={{ display: 'flex', justifyContent: 'center',alignItems:'center' }}>Press button [<Menu />] to change page</Typography>
+            <Typography variant="h5" sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>Press button [<Menu />] to change page</Typography>
         </Box>
     )
 }
@@ -95,9 +95,10 @@ const Workshop6 = () => {
                 {pageList()}
             </Drawer>
             <Switch>
-                <Route path="/workshop6/main" exact component={MainPage} />
+                <Route path="/workshop6/main" component={MainPage} />
                 <Route path="/workshop6/member" component={MemberPage} />
                 <Route path="/workshop6/product" component={ProductPage} />
+                <Redirect to="/workshop6/main" />
             </Switch>
         </>
     )
