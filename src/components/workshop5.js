@@ -1,4 +1,4 @@
-import { Container, FormControl, InputLabel, MenuItem, Select, Typography, TextField, Button, Card } from "@mui/material"
+import { Container, FormControl, InputLabel, MenuItem, Select, Typography, TextField, Button, Card, Grid } from "@mui/material"
 import Navbar from "./navbar";
 import axios from "axios";
 import { useEffect, useState } from "react";
@@ -89,53 +89,65 @@ const Workshop5 = () => {
             {rates ? (
                 <>
                     <Typography variant="h4">แอพแปลงสกุลเงิน (API)</Typography>
-                    <Card raised={true} sx={{ m: 1 }}>
-                        <Container maxWidth="lg" sx={{ minHeight: 300, display: 'flex', flexDirection: 'row', justifyContent: 'flex-start', alignItems: 'center' }}>
-                            <TextField
-                                type="number"
-                                id="outlined-basic"
-                                label="Amount"
-                                variant="outlined"
-                                sx={{ m: 1, maxWidth: 120 }}
-                                onChange={handleAmount}
-                            />
+                    <Card raised={true} sx={{ m: 1, p: 8 }}>
+                        <Grid container columns={{ xs: 1, lg: 10 }}>
 
-                            <FormControl variant="filled" sx={{ m: 1, minWidth: 180 }}>
-                                <InputLabel id="current">From</InputLabel>
-                                <Select
-                                    labelId="current-rate"
-                                    id="current"
-                                    label="current"
-                                    value={currentKey}
-                                    onChange={handleCurrentKey}
-                                >
-                                    {Object.entries(rates).map(([key, rate], index) => (
-                                        <MenuItem value={key} key={index} onClick={() => setCurrentRate(rate)} >{key}</MenuItem>
-                                    ))}
-                                </Select>
-                            </FormControl>
+                            <Grid item xs={1} lg={2} >
+                                <TextField
+                                    type="number"
+                                    id="outlined-basic"
+                                    label="Amount"
+                                    variant="outlined"
+                                    sx={{ m: 1, minWidth: 180 }}
+                                    onChange={handleAmount}
+                                />
+                            </Grid>
 
-                            <FormControl variant="filled" sx={{ m: 1, minWidth: 180 }}>
-                                <InputLabel id="convert">Convert To</InputLabel>
-                                <Select
-                                    labelId="convert-rate"
-                                    id="convert"
-                                    label="convert"
-                                    value={convertKey}
-                                    onChange={handleConvertKey}
-                                >
-                                    {Object.entries(rates).map(([key, rate], index) => (
-                                        <MenuItem value={key} key={index} onClick={() => setConvertRate(rate)} >{key}</MenuItem>
-                                    ))}
-                                </Select>
-                            </FormControl>
+                            <Grid item xs={1} lg={2}>
+                                <FormControl variant="filled" sx={{ m: 1, minWidth: 180 }}>
+                                    <InputLabel id="current">From</InputLabel>
+                                    <Select
+                                        labelId="current-rate"
+                                        id="current"
+                                        label="current"
+                                        value={currentKey}
+                                        onChange={handleCurrentKey}
+                                    >
+                                        {Object.entries(rates).map(([key, rate], index) => (
+                                            <MenuItem value={key} key={index} onClick={() => setCurrentRate(rate)} >{key}</MenuItem>
+                                        ))}
+                                    </Select>
+                                </FormControl>
+                            </Grid>
 
-                            <Button variant={"contained"} size={'large'} sx={{ m: 1, p: 2, height: 56 }} onClick={() => convertMoney()}>Convert</Button>
-                            <Card raised={true} sx={{ ml: 5 }}>
-                                <Typography variant="h4" sx={{ maxheight: 100, maxWidth: 450, display: 'flex', justifyContent: 'center', alignItems: 'center' }}>{total}</Typography>
-                            </Card>
+                            <Grid item xs={1} lg={2} >
+                                <FormControl variant="filled" sx={{ m: 1, minWidth: 180 }}>
+                                    <InputLabel id="convert">Convert To</InputLabel>
+                                    <Select
+                                        labelId="convert-rate"
+                                        id="convert"
+                                        label="convert"
+                                        value={convertKey}
+                                        onChange={handleConvertKey}
+                                    >
+                                        {Object.entries(rates).map(([key, rate], index) => (
+                                            <MenuItem value={key} key={index} onClick={() => setConvertRate(rate)} >{key}</MenuItem>
+                                        ))}
+                                    </Select>
+                                </FormControl>
+                            </Grid>
 
-                        </Container>
+                            <Grid item xs={1} lg={2}>
+                                <Button variant={"contained"} size={'large'} sx={{ m: 1, p: 2, height: 56 }} onClick={() => convertMoney()}>Convert</Button>
+                            </Grid>
+
+                            <Grid item xs={1} lg={2}>
+                                <Card sx={{ m: 1, p: 2, height: 56, minWidth: 180, display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+                                    <Typography variant="h4">{total}132133213213</Typography>
+                                </Card>
+                            </Grid>
+
+                        </Grid>
                     </Card>
                 </>
             ) : ('')

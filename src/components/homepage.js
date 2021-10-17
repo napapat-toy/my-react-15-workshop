@@ -7,13 +7,14 @@ const Homepage = () => {
         <div>
             <Navbar header={'Homepage'} />
             <Grid container spacing={1}>
-                <Grid item xs={6} md={8}>
+                <Grid item md={8}>
                     <Typography variant="h4" color="black">
                         <Link to="/workshop1" style={styles.link}>Workshop 1 Form Validator</Link>
                         <Link to="/workshop2" style={styles.link}>Workshop 2 Quiz App</Link>
                         <Link to="/workshop3" style={styles.link}>Workshop 3 Theme Dark / Light</Link>
                         <Link to="/workshop4" style={styles.link}>Workshop 4 Accordion</Link>
                         <Link to="/workshop5" style={styles.link}>Workshop 5 Currency Converter</Link>
+                        <Link to="/workshop6" style={styles.link}>Workshop 6 Navigation</Link>
                     </Typography>
                 </Grid>
             </Grid>

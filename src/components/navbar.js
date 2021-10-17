@@ -4,7 +4,7 @@ import HomeOutlined from '@mui/icons-material/HomeOutlined';
 
 const Navbar = (props) => {
     return (
-        <Box sx={{ flexGrow: 1, marginBottom: 4 }}>
+        <Box sx={{ marginBottom: 4 }}>
             <AppBar position="static">
                 <Toolbar>
                     <IconButton
@@ -14,11 +14,11 @@ const Navbar = (props) => {
                         aria-label="menu"
                         sx={{ mr: 2 }}
                     >
-                        <Link to="/" style={{color:'white'}}>
-                            <HomeOutlined/>
+                        <Link to="/" style={{ color: 'white' }}>
+                            <HomeOutlined />
                         </Link>
                     </IconButton>
-                    <Typography variant="h3" component="div" sx={{ flexGrow: 1 }}>
+                    <Typography variant="h3" component="div">
                         {props.header}
                     </Typography>
                 </Toolbar>
