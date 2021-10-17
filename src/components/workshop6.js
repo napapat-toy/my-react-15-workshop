@@ -1,9 +1,8 @@
-import { Button, Drawer, Typography, IconButton, List, ListItem, ListItemIcon, ListItemText } from "@mui/material";
+import { Button, Drawer, Typography, List, ListItem, ListItemIcon, ListItemText, Box } from "@mui/material";
 import { Menu, Home, Person, ShoppingCart } from "@mui/icons-material"
 import { useState } from "react";
 import { Link, Route, Switch, Redirect } from 'react-router-dom';
 import Navbar from "./navbar";
-import { Box } from "@mui/system";
 
 const pages = [
     {
