@@ -37,20 +37,20 @@ const WorkShop1 = () => {
 
         // Password
         if (formData.password.length <= 8) {
-            setPasswordError({ error: true, helper: 'ป้อนรหัสผ่านมากกว่า 8 ตัวอักษร' } );
+            setPasswordError({ error: true, helper: 'ป้อนรหัสผ่านมากกว่า 8 ตัวอักษร' });
         }
         else {
-            setPasswordError({ error: false, helper: '' } );
+            setPasswordError({ error: false, helper: '' });
         };
 
         // Comfirm Password
         if (!formData.confirmPassword) {
-            setConfirmPasswordError({ error: true, helper: 'ป้อนรหัสผ่าน' } );
+            setConfirmPasswordError({ error: true, helper: 'ป้อนรหัสผ่าน' });
         } else if (formData.confirmPassword !== formData.password) {
-            setConfirmPasswordError({ error: true, helper: 'รหัสผ่านไม่ตรงกัน' } );
+            setConfirmPasswordError({ error: true, helper: 'รหัสผ่านไม่ตรงกัน' });
         }
         else {
-            setConfirmPasswordError({ error: false, helper: '' } );
+            setConfirmPasswordError({ error: false, helper: '' });
         };
         // console.log(formError);
     };

@@ -143,7 +143,7 @@ const Workshop5 = () => {
 
                             <Grid item xs={1} lg={2}>
                                 <Card sx={{ m: 1, p: 2, height: 56, minWidth: 180, display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
-                                    <Typography variant="h4">{total}132133213213</Typography>
+                                    <Typography variant="h4">{total}</Typography>
                                 </Card>
                             </Grid>
 

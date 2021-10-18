@@ -24,8 +24,8 @@ const pages = [
 const MainPage = () => {
     return (
         <Box sx={{ backgroundColor: 'lightblue', textAlign: 'center', p: 5 }}>
-            <Typography variant="h2">MainPage</Typography>
-            <Typography variant="h5" sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>Press button [<Menu />] to change page</Typography>
+            <Typography variant="h2">Main Page</Typography>
+            <Typography variant="h5" sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>Press button <Menu /> to change page</Typography>
         </Box>
     )
 }
@@ -33,7 +33,7 @@ const MainPage = () => {
 const MemberPage = () => {
     return (
         <Box sx={{ backgroundColor: 'lightgreen', textAlign: 'center', p: 5 }}>
-            <Typography variant="h2">MemberPage</Typography>
+            <Typography variant="h2">Member Page</Typography>
             <Typography variant="h5">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tempore suscipit consectetur eligendi dolorum hic ipsum
                 perspiciatis unde voluptatem quam, quod adipisci assumenda est magni animi, labore illum in! Accusamus, quibusdam
                 aliquid commodi iure voluptas sequi libero, iusto natus mollitia error nostrum excepturi vitae, dolorum distinctio vel

@@ -46,7 +46,7 @@ const WorkShop2 = () => {
 
     const FirstPage = () => {
         return (
-            <Card sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', minWidth: '730px' }}>
+            <Card sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', width: '100%' }}>
                 <CardContent sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', height: '450px' }}>
                     <Typography variant="h4" fontWeight="bold" sx={{ marginBottom: '2rem' }}>แบบทดสอบก่อนเรียน</Typography>
                     <Button variant="contained" size="large" sx={{ width: '260px', marginBottom: '1.5rem' }} onClick={handlePage}>
@@ -61,7 +61,7 @@ const WorkShop2 = () => {
 
     const QuizPage = () => {
         return (
-            <Card sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', minWidth: '730px' }}>
+            <Card sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', width: '100%' }}>
                 <QuizCard data={quizData[activeStep]} />
                 <MobileStepper
                     variant="text"
@@ -75,7 +75,7 @@ const WorkShop2 = () => {
 
     const SummaryPage = () => {
         return (
-            <Card sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', minWidth: '730px' }}>
+            <Card sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', width: '100%' }}>
                 <CardContent sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', height: '450px' }}>
                     <Typography variant="h4" fontWeight="bold" sx={{ marginBottom: '2rem' }}>สรุปผลการทดสอบ</Typography>
                     <Typography variant="h4" fontWeight="bold" sx={{ marginBottom: '2rem' }}>{score} / {quizData.length} </Typography>
@@ -92,7 +92,7 @@ const WorkShop2 = () => {
     const QuizCard = ({ data }) => {
         return (
             <>
-                <CardContent sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+                <CardContent sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', width: '100%' }}>
                     <Typography variant="h4" fontWeight="bold" sx={{ marginBottom: '2rem' }}>{data.question}</Typography>
                     {data.choices.map((choise, index) => (
                         <Button variant="contained" size="large" key={index} sx={{ width: '340px', marginBottom: '1.2rem' }} onClick={() => handleNext(data.ID, choise)} >
@@ -141,9 +141,9 @@ const WorkShop2 = () => {
         <>
             <Navbar header={'Workshop 2 Quiz App'} />
             <Container maxWidth="md" sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
-                <Typography variant="h3" sx={{ marginBottom: '2rem' }}>Web Development Quiz</Typography>
-                <Card >
-                    <CardContent sx={{ backgroundColor: '#c7dcff', minWidth: '750px', minHeight: '450px', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center' }}>
+                <Typography variant="h3" sx={{ mb: 2 }}>Web Development Quiz</Typography>
+                <Card sx={{ width: '100%', m: 1 }}>
+                    <CardContent sx={{ backgroundColor: '#c7dcff', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center' }}>
                         {allPage[page]}
                     </CardContent>
                 </Card>
