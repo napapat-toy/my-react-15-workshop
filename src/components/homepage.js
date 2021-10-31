@@ -16,6 +16,7 @@ const Homepage = () => {
                         <Link to="/workshop5" style={styles.link}>Workshop 5 Currency Converter</Link>
                         <Link to="/workshop6" style={styles.link}>Workshop 6 Navigation</Link>
                         <Link to="/workshop7" style={styles.link}>Workshop 7 Image Carousel</Link>
+                        <Link to="/workshop8" style={styles.link}>Workshop 8 TodoList App</Link>
                     </Typography>
                 </Grid>
             </Grid>
